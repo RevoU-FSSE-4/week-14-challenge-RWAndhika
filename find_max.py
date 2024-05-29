@@ -15,7 +15,14 @@ def find_max(numbers: list) -> int:
     - find_max([-1, -2, -3, -4, -5]) should return -1
     """
     # Implement your solution here
-    pass
+    result = None
+    for number in numbers:
+        if result == None:
+            result = number
+        if number > result:
+            result = number
+    
+    return result
 
 # You can test your function with print statements below
 # Example:
