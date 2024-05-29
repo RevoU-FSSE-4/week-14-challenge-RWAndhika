@@ -1,5 +1,6 @@
 # count_vowels.py
 
+
 def count_vowels(s: str) -> int:
     """
     This function counts the number of vowels (a, e, i, o, u) in a given string `s`.
@@ -15,7 +16,23 @@ def count_vowels(s: str) -> int:
     - count_vowels("python") should return 1
     """
     # Implement your solution here
-    pass
+    result = 0
+    for char in s:
+        if (
+            char == "a"
+            or char == "e"
+            or char == "i"
+            or char == "o"
+            or char == "u"
+            or char == "A"
+            or char == "E"
+            or char == "I"
+            or char == "O"
+            or char == "U"
+        ):
+            result += 1
+
+    return result
 
 # You can test your function with print statements below
 # Example:
