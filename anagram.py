@@ -27,16 +27,14 @@ def is_anagram(s1: str, s2: str) -> bool:
     s2_length = 0
     s2_temp_list = []
     for char in s1.lower():
-        if char == " ":
-            continue
-        s1_temp_list = s1_temp_list + [char]
-        s1_length += 1
+        if "a" <= char <= "z":
+            s1_temp_list = s1_temp_list + [char]
+            s1_length += 1
     
     for char in s2.lower():
-        if char == " ":
-            continue
-        s2_temp_list = s2_temp_list + [char]
-        s2_length += 1
+        if "a" <= char <= "z":
+            s2_temp_list = s2_temp_list + [char]
+            s2_length += 1
 
     if s1_length == s2_length:
         temp_dict1 = {}
