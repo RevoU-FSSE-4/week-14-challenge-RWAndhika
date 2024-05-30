@@ -22,7 +22,7 @@ def is_anagram(s1: str, s2: str) -> bool:
     # Step 2: Compare the character counts of both cleaned strings
     
     # Implement your solution here
-    pass
+    
 
 # You can test your function with print statements below
 # Example:
