@@ -22,7 +22,43 @@ def is_anagram(s1: str, s2: str) -> bool:
     # Step 2: Compare the character counts of both cleaned strings
     
     # Implement your solution here
+    s1_length = 0
+    s1_temp_list = []
+    s2_length = 0
+    s2_temp_list = []
+    for char in s1.lower():
+        if char == " ":
+            continue
+        s1_temp_list = s1_temp_list + [char]
+        s1_length += 1
     
+    for char in s2.lower():
+        if char == " ":
+            continue
+        s2_temp_list = s2_temp_list + [char]
+        s2_length += 1
+
+    if s1_length == s2_length:
+        temp_dict1 = {}
+        temp_dict2 = {}
+        for char in s1_temp_list:
+            if char in temp_dict1:
+                temp_dict1[char] += 1
+            else:
+                temp_dict1[char] = 1
+        
+        for char in s2_temp_list:
+            if char in temp_dict2:
+                temp_dict2[char] += 1
+            else:
+                temp_dict2[char] = 1
+        
+        if temp_dict1 == temp_dict2:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 # You can test your function with print statements below
 # Example:
